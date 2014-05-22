@@ -1,0 +1,39 @@
+@media screen and (min-width: 568px) {
+
+  section#properties {
+    .item {
+      width: 50%;
+      float:left;
+      .inner {
+        margin: 0 4px 20px 4px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section#properties {
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    .item {
+      width: 100%;
+      .inner {
+        margin: 0 0 20px 0;
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  section#properties {
+    .item {
+      width: 50%;
+      .inner {
+        margin: 0 4px 20px 4px;
+      }
+    }
+  }
+
+}

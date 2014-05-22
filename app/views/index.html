@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script data-main="/assets/js/app.js" src="/assets/js/vendor/require.js"></script>
+
+<!--
+    <script src="/assets/js/vendor/jquery2/jquery2.min.js"></script>
+-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsiveslides.css">
+
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+    -->
+</head>
+<body class="homeMode">
+    <section id="topbar">
+        <a href="#" onclick="window.back();">back</a>
+    </section>
+    <section id="search">
+        <form>
+            <div class="search-container">
+                <input type="search" placeholder="Where?" id="location">
+                <input type="hidden" ng-model="form.lon">
+                <input type="hidden" ng-model="form.lat">
+            </div>
+            <input type="submit" value="Chercher">
+        </form>
+    </section>
+    <section id="home">
+        <ul class="rslides" id="slider1">
+            <li><img src="/assets/img/properties/5/5029026_6.jpg" alt=""></li>
+            <li><img src="/assets/img/properties/4/4710991_2.jpg" alt=""></li>
+            <li><img src="/assets/img/properties/1/4622179_1.jpg" alt=""></li>
+        </ul>
+    </section>
+
+    <section id="properties">
+
+        <div class="message">No Match Found
+            <div class="item"><div class="info">click here</div></div></div>
+    </section>
+
+    <section id="property"></section>
+    <script id="properties-tmpl" type="x-tmpl-mustache">
+    {{#properties}}
+    <div class="item">
+        <div class="inner">
+            <div class="img-container"><img src="/assets/img/properties/{{id}}/{{images.0}}"></div>
+            <div class="info" data-href-url="{{urlid}}">
+                <span class="title">{{title}}</span>
+            </div>
+            <div class="details">
+                <div class="agency">
+                    <img src="/assets/img/agencies/{{agency.id}}/{{agency.logo}}" height="30px" alt="{{agency.title}}">
+                </div>
+                <span class="price">{{price}}</span>
+            </div>
+        </div>
+    </div>
+    {{/properties}}
+    </script>
+    <script id="property-tmpl" type="x-tmpl-mustache">
+        <header>
+            <img src="/assets/img/properties/{{id}}/{{images.0}}">
+            <span class="title">{{title}}</span>
+        </header>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+<!--
+        <header class="head">
+            <div class="inner">
+                <div class="img-container"><img src="/assets/img/properties/{{id}}/{{images.0}}"></div>
+                {{price}}
+            </div>
+        </header>
+
+        <section class="info">
+            <h1 class="info-title">{{title}}</h1>
+            <section class="info-highlight">
+                <ul>
+                    <li>3 chambres</li>
+                    <li>1 piscine</li>
+                    <li>200m2</li>
+                </ul>
+            </section>
+            <p class="info-desc">
+                {{description}}
+                <nav><span ng-click="backToSearch()">Back to Search</span></nav>
+            </p>
+-->
+        </section>
+
+    </script>
+</body>
+</html>
